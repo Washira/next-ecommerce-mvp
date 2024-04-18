@@ -29,3 +29,13 @@ Don't forget to run migrations:
 ```bash
 npx prisma migrate dev --name init
 ```
+
+## Shadcn UI
+
+This project uses [Shadcn UI for Next.js](https://ui.shadcn.com/docs/installation/next) for styling.
+
+Let command to setup your project:
+
+```bash
+npx shadcn-ui@latest init
+```
