@@ -1,4 +1,4 @@
-const CURRENCY_FORMATTER = new Intl.NumberFormat('en-US', {
+const CURRENCY_FORMATTER = new Intl.NumberFormat('th-TH', {
   currency: 'THB',
   style: 'currency',
   minimumFractionDigits: 0,
