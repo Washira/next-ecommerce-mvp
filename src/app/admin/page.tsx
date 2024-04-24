@@ -8,6 +8,10 @@ import {
 import db from '@/db/db'
 import { formatCurrency, formatNumber } from '@/lib/formatters'
 
+function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 async function getSalesData() {
   const data = await db.order.aggregate({
     _sum: {
@@ -15,6 +19,7 @@ async function getSalesData() {
     },
     _count: true,
   })
+  await wait(2000)
   return {
     amount: (data._sum?.pricePaid || 0) / 100,
     numberOfSales: data._count,
