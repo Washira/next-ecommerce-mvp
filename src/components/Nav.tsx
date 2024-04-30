@@ -24,7 +24,7 @@ export function NavLink(
         'p-4 hover:bg-secondary hover:text-secondary-foreground focus-visible:bg-secondary focus-visible:text-secondary-foreground',
         pathname === props.href ? 'bg-background text-foreground' : ''
       )}
-      href="/"
+      href={props.href}
     />
   )
 }
